@@ -13,13 +13,26 @@
     <title>Panel de Administración</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body >
 
-    <h1 class="text-2xl mb-4">Panel de Administración</h1>
-    <p class="mb-4">¡Bienvenido, <%= session.getAttribute("username") %>!</p>
-    <form action="logout" method="post">
-        <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Cerrar Sesión</button>
-    </form>
+<body class="bg-gray-200">
+<div class="flex h-screen">
+    <div class="w-64 bg-blue-400 text-gray-200 rounded  p-6">
+        <h1 class="text-2xl mb-4">Bienvenido, Admin</h1>
+        <ul>
+            <li class="mb-2"><button class="w-full rounded bg-gray-700 hover:bg-gray-600 p-2 text-center">Agregar Alumno</button></li>
+            <li class="mb-2"><button class="w-full rounded bg-gray-700 hover:bg-gray-600 p-2 text-center">Agregar Materia</button></li>
+            <li class="mb-2"><button class="w-full rounded bg-gray-700 hover:bg-gray-600 p-2 text-center">Editar Alumno</button></li>
+            <li class="mb-2"><button class="w-full rounded bg-gray-700 hover:bg-gray-600 p-2 text-center">Editar Materia</button></li>
+            <li class="mb-2"><button class="w-full rounded bg-gray-700 hover:bg-gray-600 p-2 text-center">Inscribir Alumno</button></li>
+            <form action="logout" method="post">
+                <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Cerrar Sesión</button>
+            </form>
 
+        </ul>
+    </div>
+    <div class="flex-1 p-6">
+        <!-- Aquí va el contenido principal -->
+    </div>
+</div>
 </body>
 </html>
