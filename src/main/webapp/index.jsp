@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-200 flex justify-center items-center h-screen">
 <div class="bg-blue-400 h-screen w-screen">
@@ -17,9 +17,12 @@
                     <div class="w-full mt-4">
                         <%
                             String error = request.getParameter("error");
-                            if ("true".equals(error)) { %>
-                        <p class="text-red-500">Credenciales incorrectas. Por favor, intenta de nuevo.</p>
-                        <% } %>
+                            if ("true".equals(error)) {
+                                %>
+                                    <p class="text-red-500 text-center">Credenciales incorrectas. Por favor, intenta de nuevo.</p>
+                                <%
+                            }
+                        %>
                         <form class="form-horizontal w-3/4 mx-auto" method="POST" action="login">
                             <div class="flex flex-col mt-4">
                                 <input id="username" type="text" class="flex-grow h-8 px-2 border rounded border-grey-400" name="username" value="" placeholder="Nombre de usuario">
