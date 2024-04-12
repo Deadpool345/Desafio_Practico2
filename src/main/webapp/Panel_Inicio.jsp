@@ -12,11 +12,13 @@
     <div class="w-64 bg-blue-400 text-gray-200 rounded  p-6">
         <h1 class="text-2xl mb-4">Bienvenido, <%= session.getAttribute("username") %></h1>
         <ul class="mt-[3.5rem]">
-            <li class="mb-[3.5rem]"><button class="w-full h-[3rem] rounded-[1.5rem] bg-gray-700 hover:bg-gray-600 p-2 text-center" onclick="loadContent('AgregarAlumno.jsp')">Agregar Alumno</button></li>
-            <li class="mb-[3.5rem]"><button class="w-full h-[3rem] rounded-[1.5rem] bg-gray-700 hover:bg-gray-600 p-2 text-center" onclick="loadContent('AgregarMateria.jsp')">Agregar Materia</button></li>
-            <li class="mb-[3.5rem]"><button class="w-full h-[3rem] rounded-[1.5rem] bg-gray-700 hover:bg-gray-600 p-2 text-center" onclick="loadContent('EditarAlumno.jsp')">Editar Alumno</button></li>
-            <li class="mb-[3.5rem]"><button class="w-full h-[3rem] rounded-[1.5rem] bg-gray-700 hover:bg-gray-600 p-2 text-center" onclick="loadContent('EditarMateria.jsp')">Editar Materia</button></li>
-            <li class="mb-[3.5rem]"><button class="w-full h-[3rem] rounded-[1.5rem] bg-gray-700 hover:bg-gray-600 p-2 text-center" onclick="loadContent('InscribirAlumno.jsp')">Inscribir Alumno</button></li>
+            <li class="mb-[1.5rem]"><button class="w-full h-[3rem] rounded-[1.5rem] bg-gray-700 hover:bg-gray-600 p-2 text-center" onclick="loadContent('AgregarAlumno.jsp')">Agregar Alumno</button></li>
+            <li class="mb-[1.5rem]"><button class="w-full h-[3rem] rounded-[1.5rem] bg-gray-700 hover:bg-gray-600 p-2 text-center" onclick="loadContent('AgregarMateria.jsp')">Agregar Materia</button></li>
+            <li class="mb-[1.5rem]"><button class="w-full h-[3rem] rounded-[1.5rem] bg-gray-700 hover:bg-gray-600 p-2 text-center" onclick="loadContent('EditarAlumno.jsp')">Editar Alumno</button></li>
+            <li class="mb-[1.5rem]"><button class="w-full h-[3rem] rounded-[1.5rem] bg-gray-700 hover:bg-gray-600 p-2 text-center" onclick="loadContent('EditarMateria.jsp')">Editar Materia</button></li>
+            <li class="mb-[1.5rem]"><button class="w-full h-[3rem] rounded-[1.5rem] bg-gray-700 hover:bg-gray-600 p-2 text-center" onclick="loadContent('InscribirAlumno.jsp')">Inscribir Alumno</button></li>
+            <li class="mb-[1.5rem]"><button class="w-full h-[3rem] rounded-[1.5rem] bg-gray-700 hover:bg-gray-600 p-2 text-center" onclick="loadContent('EliminarInscripcion.jsp')">Eliminar Inscripción</button></li>
+            <li class="mb-[1.5rem]"><button class="w-full h-[3rem] rounded-[1.5rem] bg-gray-700 hover:bg-gray-600 p-2 text-center" onclick="loadContent('InscripcionDetalle.jsp')">Detalles Inscripción</button></li>
             <form action="logout" method="post" class="flex justify-center">
                 <button type="submit" class="bg-red-500 text-white px-4 py-2 h-[3rem] rounded-[1.5rem] hover:bg-red-600">Cerrar Sesión</button>
             </form>
