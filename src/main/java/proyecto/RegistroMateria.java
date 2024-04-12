@@ -19,7 +19,7 @@ public class RegistroMateria extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        // Obtener los parámetros del formulario
+
         String codigo = request.getParameter("codigo");
         String nombre = request.getParameter("nombre");
         String fecha = request.getParameter("fecha");
@@ -29,7 +29,7 @@ public class RegistroMateria extends HttpServlet {
         Connection conn = null;
         PreparedStatement pstmt = null;
         try {
-            // Establecer la conexión con la base de datos
+
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/desafio", "root", "");
 

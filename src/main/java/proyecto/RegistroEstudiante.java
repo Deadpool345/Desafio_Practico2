@@ -42,7 +42,7 @@ public class RegistroEstudiante extends HttpServlet {
             pstmt.setString(4, fecha);
             pstmt.setString(5, direccion);
 
-            // Ejecutar la consulta SQL
+
             int rowsAffected = pstmt.executeUpdate();
             if (rowsAffected > 0) {
 

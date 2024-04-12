@@ -1,5 +1,3 @@
-<%@ page import="java.sql.*" %>
-<%@ page import="java.io.PrintWriter" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
