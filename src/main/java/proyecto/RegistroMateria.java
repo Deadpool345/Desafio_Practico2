@@ -2,10 +2,7 @@ package proyecto;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -32,16 +29,13 @@ public class RegistroMateria extends HttpServlet {
 
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/desafio", "root", "");
+            Statement s = conn.createStatement();
 
-            String sql = "INSERT INTO materias (CodigoMateria, Nombre, Descripcion, FechaCreacion) VALUES (?, ?, ?, ?)";
-            pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, codigo);
-            pstmt.setString(2, nombre);
-            pstmt.setString(3, descripcion);
-            pstmt.setString(4, fecha);
+            String sql = "INSERT INTO materias (CodigoMateria, Nombre, Descripcion, FechaCreacion) VALUES ('" + codigo + "', '" + nombre + "', '" + descripcion + "','" + fecha + "')";
+
 
             // Ejecutar la consulta SQL
-            int rowsAffected = pstmt.executeUpdate();
+            int rowsAffected = s.executeUpdate(sql);
             if (rowsAffected > 0) {
                 out.println("<p class=\"text-green-500 text-center\">Registro de la materia exitoso!</p>");
             } else {
