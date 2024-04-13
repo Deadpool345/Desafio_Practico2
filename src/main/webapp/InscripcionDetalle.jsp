@@ -60,9 +60,7 @@
                 <th class="px-4 py-2">Apellidos</th>
             </tr>
             </thead>
-            <tbody id="detallesBody">
-            <%-- Aquí se insertarán los detalles de la inscripción desde el servlet --%>
-            </tbody>
+
         </table>
     </div>
 </div>
